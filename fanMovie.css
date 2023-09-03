@@ -1,0 +1,18 @@
+body{
+    background-image: url('static/movie8.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* z-index: 1; */;
+}
+
+#movieList{
+    height: auto;
+    margin-top: 10px;
+}
+.bg-black{
+    color: white;
+}
+
+#list-style{
+    list-style-type: none;
+}
