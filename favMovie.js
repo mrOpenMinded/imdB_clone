@@ -35,6 +35,8 @@ if (favoriteMovies && favoriteMovies.length > 0) {
         deleteButton.addEventListener('click', () => {
             // Remove the movie div from the page
            
+
+            //confirming if user wanna remove from favList
             if( confirm('Are yu sure yu wanna delete from favList?')===true){
             movie.remove();
             const getFavMovies=JSON.parse(localStorage.getItem('favoriteMovies'));
