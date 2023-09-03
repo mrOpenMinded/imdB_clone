@@ -34,7 +34,8 @@ if (favoriteMovies && favoriteMovies.length > 0) {
         const deleteButton = movie.querySelector('.fa-trash');
         deleteButton.addEventListener('click', () => {
             // Remove the movie div from the page
-
+           
+            if( confirm('Are yu sure yu wanna delete from favList?')===true){
             movie.remove();
             const getFavMovies=JSON.parse(localStorage.getItem('favoriteMovies'));
             // Remove the movie ID from localStorage
@@ -43,6 +44,7 @@ if (favoriteMovies && favoriteMovies.length > 0) {
             console.log(updatedFavoriteMovies);
             localStorage.setItem('favoriteMovies', JSON.stringify(updatedFavoriteMovies));
             favoriteMovies=updatedFavoriteMovies;
+            }
         });
     }
     favoriteMovies.forEach(movieId => {
